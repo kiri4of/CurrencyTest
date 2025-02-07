@@ -1,6 +1,6 @@
 
 import UIKit
 
-class MainView: UIView {
+class CurrencyView: UIView {
     
 }

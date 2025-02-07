@@ -1,8 +1,8 @@
 
 import Foundation
 
-class CurrencyViewController: BaseViewController<MainView> {
-    override init(mainView: MainView) {
+class CurrencyViewController: BaseViewController<CurrencyView> {
+    override init(mainView: CurrencyView) {
         super.init(mainView: mainView)
     }
     
@@ -12,6 +12,7 @@ class CurrencyViewController: BaseViewController<MainView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainView.backgroundColor = .blue
     }
     
 }

@@ -1,8 +1,10 @@
-//
-//  FavoriteScreenBuilder.swift
-//  CurrencyTestTask
-//
-//  Created by Kiri4of on 06/02/2025.
-//
 
 import Foundation
+
+class FavoriteScreenBuilder {
+    public static func createFavoriteViewController() -> FavoriteViewController{
+        let view = FavoriteView()
+        let vc = FavoriteViewController(mainView: view)
+        return vc
+    }
+}
