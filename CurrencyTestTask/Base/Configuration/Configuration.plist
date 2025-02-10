@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>baseURL</key>
+	<string>https://swop.cx/graphql</string>
+	<key>apiKey</key>
+	<string>5ab1390023cb2b38ffc64aa89d739c10df3250bde607d22ad360f06a220b013c</string>
+</dict>
+</plist>
