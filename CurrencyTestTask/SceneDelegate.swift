@@ -1,22 +1,20 @@
-//
-//  SceneDelegate.swift
-//  CurrencyTestTask
-//
-//  Created by Kiri4of on 06/02/2025.
-//
 
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var tabBarCoordinator: TabBarCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let vc = ViewController()
-        window?.rootViewController = vc
+        window?.overrideUserInterfaceStyle = .light
+        if tabBarCoordinator == nil {
+            tabBarCoordinator = TabBarCoordinator()
+            tabBarCoordinator?.start()
+        }
+        window?.rootViewController = tabBarCoordinator?.tabBarController
         window?.makeKeyAndVisible()
     }
 

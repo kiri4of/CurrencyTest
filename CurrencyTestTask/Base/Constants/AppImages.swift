@@ -1,8 +1,10 @@
-//
-//  AppImages.swift
-//  CurrencyTestTask
-//
-//  Created by Kiri4of on 06/02/2025.
-//
 
-import Foundation
+import UIKit
+
+enum AppImages{
+    static let currencyImage = UIImage(systemName: "coloncurrencysign.circle.fill")
+    static let favoriteImage = UIImage(systemName: "star.fill")
+    static let starImage = UIImage(systemName: "star")
+}
+
+
