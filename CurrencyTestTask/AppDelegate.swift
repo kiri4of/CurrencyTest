@@ -7,7 +7,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //if not save in Keychain load from Configuration
+        if KeychainManager.shared.load(key: "SWOPAPIKey") == nil {
+            if let plistPath = Bundle.main.path(forResource: "Configuration", ofType: "plist"),
+               let config = NSDictionary(contentsOfFile: plistPath),
+               let apiKey = config["apiKey"] as? String {
+                KeychainManager.shared.save(key: "SWOPAPIKey", value: apiKey)
+            }
+        }
+        
         return true
     }
 

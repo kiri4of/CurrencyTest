@@ -6,15 +6,20 @@ import SWOPAPI
 final class GraphQLNetwork {
     
     private lazy var apolloClient: ApolloClient = {
+        guard let apiKey = KeychainManager.shared.load(key: "SWOPAPIKey") else {
+            fatalError("API Key not found in Keychain")
+        }
+        
         let baseURL = Configuration.baseURL
-        let finalURLString = baseURL + "?api-key=" + Configuration.apiKey
+        let finalURLString = "\(baseURL)?api-key=\(apiKey)"
+        
         guard let url = URL(string: finalURLString) else {
             fatalError("Invalid baseUrl or apiKey")
         }
         return ApolloClient(url: url)
     }()
+    
     //fetch latest currency rates like (EUR -> USD, CHF, HKD)
-
     func fetchLatestEuroRates(completion: @escaping (Result<[CurrencyRateModel], Error>) -> Void) {
         apolloClient.fetch(query: LatestEuroQuery()) { result in
             switch result {

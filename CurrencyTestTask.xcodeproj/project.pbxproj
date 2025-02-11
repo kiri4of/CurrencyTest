@@ -36,6 +36,7 @@
 		F7E2A52A2D5A92080036E0AB /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5292D5A92080036E0AB /* CurrencyViewModel.swift */; };
 		F7E2A52D2D5A9BB30036E0AB /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A52C2D5A9BB30036E0AB /* FavoritesManager.swift */; };
 		F7E2A5302D5AA1E20036E0AB /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A52F2D5AA1E20036E0AB /* FavoritesViewModel.swift */; };
+		F7F634812D5B740E005F06A6 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F634802D5B740E005F06A6 /* KeyChainManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		F7E2A5292D5A92080036E0AB /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
 		F7E2A52C2D5A9BB30036E0AB /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		F7E2A52F2D5AA1E20036E0AB /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		F7F634802D5B740E005F06A6 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		F7E2A4D02D5545AC0036E0AB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				F7F6347F2D5B7368005F06A6 /* KeyChainManager */,
 				F7E2A52B2D5A9B980036E0AB /* FavoritesManager */,
 				F7E2A50E2D58F5990036E0AB /* NetworkManager */,
 			);
@@ -327,6 +330,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		F7F6347F2D5B7368005F06A6 /* KeyChainManager */ = {
+			isa = PBXGroup;
+			children = (
+				F7F634802D5B740E005F06A6 /* KeyChainManager.swift */,
+			);
+			path = KeyChainManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +431,7 @@
 				F7E2A4E82D55479B0036E0AB /* AppImages.swift in Sources */,
 				F7E2A4D42D5545E00036E0AB /* CurrencyView.swift in Sources */,
 				F7E2A52D2D5A9BB30036E0AB /* FavoritesManager.swift in Sources */,
+				F7F634812D5B740E005F06A6 /* KeyChainManager.swift in Sources */,
 				F7E2A4B92D5533380036E0AB /* AppDelegate.swift in Sources */,
 				F7E2A5302D5AA1E20036E0AB /* FavoritesViewModel.swift in Sources */,
 				F7E2A4E12D5546BD0036E0AB /* TabBarCoordinator.swift in Sources */,
