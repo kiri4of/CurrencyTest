@@ -1,10 +1,12 @@
 
 import Foundation
 
-class FavoriteScreenBuilder {
-    public static func createFavoriteViewController() -> FavoriteViewController{
-        let view = FavoriteView()
-        let vc = FavoriteViewController(mainView: view)
+class FavoritesScreenBuilder {
+    public static func createFavoritesViewController() -> FavoritesViewController{
+        let view = FavoritesView()
+        let viewModel = FavoritesViewModel()
+        let vc = FavoritesViewController(mainView: view, viewModel: viewModel)
         return vc
     }
 }
+

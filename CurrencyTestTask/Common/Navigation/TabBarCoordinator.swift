@@ -6,7 +6,7 @@ class TabBarCoordinator {
     
     func start() {
         let currencyVC = MainScreenBuilder.createCurrencyViewController()
-        let favoriteVC = FavoriteScreenBuilder.createFavoriteViewController()
+        let favoriteVC = FavoritesScreenBuilder.createFavoritesViewController()
         
         //icons
         currencyVC.tabBarItem = UITabBarItem(title: "Currency", image: AppImages.currencyImage, tag: 0)

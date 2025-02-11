@@ -25,16 +25,17 @@
 		F7E2A4F22D55498F0036E0AB /* CurrencyScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A4F12D55498F0036E0AB /* CurrencyScreenBuilder.swift */; };
 		F7E2A4F52D5549F00036E0AB /* FavoriteScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A4F42D5549F00036E0AB /* FavoriteScreenBuilder.swift */; };
 		F7E2A4F82D554B4A0036E0AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F7E2A4F72D554B4A0036E0AB /* SnapKit */; };
-		F7E2A4FA2D554B4A0036E0AB /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F7E2A4F92D554B4A0036E0AB /* SnapKit-Dynamic */; };
 		F7E2A4FF2D567F2D0036E0AB /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = F7E2A4FE2D567F2D0036E0AB /* Apollo */; };
 		F7E2A50B2D56883F0036E0AB /* CurrencyRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A50A2D56883F0036E0AB /* CurrencyRateModel.swift */; };
-		F7E2A50D2D5689920036E0AB /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A50C2D5689920036E0AB /* CurrencyCell.swift */; };
+		F7E2A50D2D5689920036E0AB /* CurrencyExchangeRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A50C2D5689920036E0AB /* CurrencyExchangeRateCell.swift */; };
 		F7E2A5102D58F5B30036E0AB /* GraphQLNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A50F2D58F5B30036E0AB /* GraphQLNetwork.swift */; };
 		F7E2A51A2D5A4F8C0036E0AB /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = F7E2A5192D5A4F8C0036E0AB /* schema.graphqls */; };
 		F7E2A51D2D5A536E0036E0AB /* SWOPAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F7E2A51C2D5A536E0036E0AB /* SWOPAPI */; };
 		F7E2A51F2D5A55420036E0AB /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7E2A51E2D5A55420036E0AB /* Configuration.plist */; };
 		F7E2A5222D5A56660036E0AB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5212D5A56660036E0AB /* Configuration.swift */; };
 		F7E2A52A2D5A92080036E0AB /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A5292D5A92080036E0AB /* CurrencyViewModel.swift */; };
+		F7E2A52D2D5A9BB30036E0AB /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A52C2D5A9BB30036E0AB /* FavoritesManager.swift */; };
+		F7E2A5302D5AA1E20036E0AB /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2A52F2D5AA1E20036E0AB /* FavoritesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,13 +59,15 @@
 		F7E2A4F12D55498F0036E0AB /* CurrencyScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyScreenBuilder.swift; sourceTree = "<group>"; };
 		F7E2A4F42D5549F00036E0AB /* FavoriteScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreenBuilder.swift; sourceTree = "<group>"; };
 		F7E2A50A2D56883F0036E0AB /* CurrencyRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateModel.swift; sourceTree = "<group>"; };
-		F7E2A50C2D5689920036E0AB /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		F7E2A50C2D5689920036E0AB /* CurrencyExchangeRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeRateCell.swift; sourceTree = "<group>"; };
 		F7E2A50F2D58F5B30036E0AB /* GraphQLNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLNetwork.swift; sourceTree = "<group>"; };
 		F7E2A5132D59040C0036E0AB /* LatestEuro.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LatestEuro.graphql; sourceTree = "<group>"; };
 		F7E2A5192D5A4F8C0036E0AB /* schema.graphqls */ = {isa = PBXFileReference; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
 		F7E2A51E2D5A55420036E0AB /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		F7E2A5212D5A56660036E0AB /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		F7E2A5292D5A92080036E0AB /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
+		F7E2A52C2D5A9BB30036E0AB /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		F7E2A52F2D5AA1E20036E0AB /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +78,6 @@
 				F7E2A4F82D554B4A0036E0AB /* SnapKit in Frameworks */,
 				F7E2A4FF2D567F2D0036E0AB /* Apollo in Frameworks */,
 				F7E2A51D2D5A536E0036E0AB /* SWOPAPI in Frameworks */,
-				F7E2A4FA2D554B4A0036E0AB /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +150,7 @@
 		F7E2A4CF2D55459C0036E0AB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F7E2A5332D5AC6930036E0AB /* UI */,
 				F7E2A4DF2D5546AA0036E0AB /* Navigation */,
 				F7E2A4D82D55463C0036E0AB /* Adaptive */,
 				F7E2A4D52D5545F70036E0AB /* ViewController */,
@@ -158,6 +161,7 @@
 		F7E2A4D02D5545AC0036E0AB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				F7E2A52B2D5A9B980036E0AB /* FavoritesManager */,
 				F7E2A50E2D58F5990036E0AB /* NetworkManager */,
 			);
 			path = Managers;
@@ -167,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				F7E2A4D32D5545E00036E0AB /* CurrencyView.swift */,
-				F7E2A50C2D5689920036E0AB /* CurrencyCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 		F7E2A4E92D5548310036E0AB /* FavoriteModule */ = {
 			isa = PBXGroup;
 			children = (
+				F7E2A52E2D5AA1C70036E0AB /* ViewModel */,
 				F7E2A4EB2D55484D0036E0AB /* View */,
 				F7E2A4EA2D5548470036E0AB /* Controller */,
 				F7E2A4F32D5549D50036E0AB /* Helper */,
@@ -299,6 +303,30 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		F7E2A52B2D5A9B980036E0AB /* FavoritesManager */ = {
+			isa = PBXGroup;
+			children = (
+				F7E2A52C2D5A9BB30036E0AB /* FavoritesManager.swift */,
+			);
+			path = FavoritesManager;
+			sourceTree = "<group>";
+		};
+		F7E2A52E2D5AA1C70036E0AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F7E2A52F2D5AA1E20036E0AB /* FavoritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F7E2A5332D5AC6930036E0AB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F7E2A50C2D5689920036E0AB /* CurrencyExchangeRateCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -317,7 +345,6 @@
 			name = CurrencyTestTask;
 			packageProductDependencies = (
 				F7E2A4F72D554B4A0036E0AB /* SnapKit */,
-				F7E2A4F92D554B4A0036E0AB /* SnapKit-Dynamic */,
 				F7E2A4FE2D567F2D0036E0AB /* Apollo */,
 				F7E2A51C2D5A536E0036E0AB /* SWOPAPI */,
 			);
@@ -385,14 +412,16 @@
 				F7E2A5102D58F5B30036E0AB /* GraphQLNetwork.swift in Sources */,
 				F7E2A52A2D5A92080036E0AB /* CurrencyViewModel.swift in Sources */,
 				F7E2A4D72D5546090036E0AB /* BaseViewController.swift in Sources */,
-				F7E2A50D2D5689920036E0AB /* CurrencyCell.swift in Sources */,
+				F7E2A50D2D5689920036E0AB /* CurrencyExchangeRateCell.swift in Sources */,
 				F7E2A5222D5A56660036E0AB /* Configuration.swift in Sources */,
 				F7E2A4BD2D5533380036E0AB /* CurrencyViewContoller.swift in Sources */,
 				F7E2A4DC2D55463C0036E0AB /* Dimension.swift in Sources */,
 				F7E2A4E62D55477D0036E0AB /* AppColors.swift in Sources */,
 				F7E2A4E82D55479B0036E0AB /* AppImages.swift in Sources */,
 				F7E2A4D42D5545E00036E0AB /* CurrencyView.swift in Sources */,
+				F7E2A52D2D5A9BB30036E0AB /* FavoritesManager.swift in Sources */,
 				F7E2A4B92D5533380036E0AB /* AppDelegate.swift in Sources */,
+				F7E2A5302D5AA1E20036E0AB /* FavoritesViewModel.swift in Sources */,
 				F7E2A4E12D5546BD0036E0AB /* TabBarCoordinator.swift in Sources */,
 				F7E2A4EF2D5549000036E0AB /* FavoriteView.swift in Sources */,
 				F7E2A4DD2D55463C0036E0AB /* Device.swift in Sources */,
@@ -550,8 +579,9 @@
 				INFOPLIST_FILE = CurrencyTestTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,9 +589,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kiri4of.projects.CurrencyTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -577,8 +610,9 @@
 				INFOPLIST_FILE = CurrencyTestTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,9 +620,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kiri4of.projects.CurrencyTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -646,11 +683,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F7E2A4F62D554B4A0036E0AB /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		F7E2A4F92D554B4A0036E0AB /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F7E2A4F62D554B4A0036E0AB /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		F7E2A4FE2D567F2D0036E0AB /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;

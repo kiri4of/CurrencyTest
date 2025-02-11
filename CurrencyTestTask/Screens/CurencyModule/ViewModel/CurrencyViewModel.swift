@@ -27,4 +27,13 @@ final class CurrencyViewModel {
             }
         }
     }
+    
+    func toggleFavorite(for rate: CurrencyRateModel) {
+        FavoritesManager.shared.toggleFavorite(rate)
+        self.onDataUpdated?()
+    }
+    
+    func isFavoirite(_ rate: CurrencyRateModel) -> Bool {
+        return FavoritesManager.shared.isFavorite(rate)
+    }
 }

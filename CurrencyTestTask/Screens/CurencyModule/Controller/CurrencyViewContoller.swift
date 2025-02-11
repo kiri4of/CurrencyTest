@@ -42,7 +42,7 @@ class CurrencyViewController: BaseViewController<CurrencyView> {
     }
     
     private func setupCollectionView() {
-        mainView.collectionView.register(CurrencyCell.self, forCellWithReuseIdentifier: CurrencyCell.reuseID)
+        mainView.collectionView.register(CurrencyExchangeRateCell.self, forCellWithReuseIdentifier: CurrencyExchangeRateCell.reuseID)
         mainView.collectionView.setCollectionViewLayout(createLayout(), animated: false)
     }
     
@@ -69,14 +69,29 @@ class CurrencyViewController: BaseViewController<CurrencyView> {
     
     //Int - section, ModelType - our Hashable element
     private func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Int, CurrencyRateModel>(collectionView: mainView.collectionView) { (collectionView, indexPath, model) -> UICollectionViewCell? in
-            
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CurrencyCell.reuseID, for: indexPath) as? CurrencyCell
-            else { return UICollectionViewCell() }
-            cell.configure(with: model)
-            return cell
-        }
-    }
+           dataSource = UICollectionViewDiffableDataSource<Int, CurrencyRateModel>(
+               collectionView: mainView.collectionView)
+        { [weak self] (collectionView, indexPath, rate) -> UICollectionViewCell? in
+               
+               guard let cell = collectionView.dequeueReusableCell(
+                   withReuseIdentifier: CurrencyExchangeRateCell.reuseID,
+                   for: indexPath
+               ) as? CurrencyExchangeRateCell else {
+                   return UICollectionViewCell()
+               }
+               
+               guard let self = self else { return cell }
+               //is current rate in favorites?
+               let isFav = self.viewModel.isFavoirite(rate)
+               cell.configure(with: rate, isFavorite: isFav, showFavoriteButton: true)
+               
+               cell.onFavoriteTapped = { [weak self] in
+                   self?.viewModel.toggleFavorite(for: rate)
+               }
+               
+               return cell
+           }
+       }
     
     private func applySnapshot() {
         guard let dataSource = dataSource else { return }
