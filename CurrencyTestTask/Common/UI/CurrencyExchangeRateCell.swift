@@ -1,4 +1,3 @@
-
 import UIKit
 import SnapKit
 
@@ -10,41 +9,48 @@ class CurrencyExchangeRateCell: UICollectionViewCell {
     
     private let favoriteButton: UIButton = {
         let button = UIButton(type: .system)
-        let starImage = AppImages.starImage
+        let starImage = UIImage(systemName: "star")
         button.setImage(starImage, for: .normal)
+        button.tintColor = .systemGray
         return button
     }()
     
-    private var isFavorite = false
+    private var displayedFavoriteState: Bool = false
     
+    //callback when we tapped the button
     var onFavoriteTapped: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupViews()
         setupConstraints()
-        
         favoriteButton.addTarget(self, action: #selector(didTapFavoriteButton), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    } 
-    
+    }
+
     func configure(with model: CurrencyRateModel, isFavorite: Bool, showFavoriteButton: Bool) {
+        //update text
         currencyLabel.text = "\(model.baseCurrency) -> \(model.quoteCurrency)\n\(model.date)"
         rateLabel.text = String(format: "%.4f", model.quote)
         
-        let starName = isFavorite ? "star.fill" : "star"
+        //save to uor temp var
+        displayedFavoriteState = isFavorite
+        
+        //update button image with state
+        let starName = displayedFavoriteState ? "star.fill" : "star"
         let starImage = UIImage(systemName: starName)
         favoriteButton.setImage(starImage, for: .normal)
-        favoriteButton.isHidden = !showFavoriteButton 
+        favoriteButton.tintColor = displayedFavoriteState ? .systemYellow : .systemGray
+        
+        favoriteButton.isHidden = !showFavoriteButton
     }
     
     private func setupViews() {
         currencyLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        currencyLabel.numberOfLines = 2 // two lines for data and currency
+        currencyLabel.numberOfLines = 2
         
         rateLabel.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         rateLabel.textAlignment = .right
@@ -77,12 +83,15 @@ class CurrencyExchangeRateCell: UICollectionViewCell {
     }
     
     @objc private func didTapFavoriteButton() {
-        isFavorite.toggle()
+        //toggle local state
+        displayedFavoriteState.toggle()
         
-        let newImage = isFavorite ? AppImages.favoriteImage : AppImages.starImage
+        //update image button
+        let newImageName = displayedFavoriteState ? "star.fill" : "star"
+        let newImage = UIImage(systemName: newImageName)
         favoriteButton.setImage(newImage, for: .normal)
+        favoriteButton.tintColor = displayedFavoriteState ? .systemYellow : .systemGray
         
         onFavoriteTapped?()
     }
 }
-

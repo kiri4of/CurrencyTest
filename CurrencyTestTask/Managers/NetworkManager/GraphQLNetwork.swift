@@ -42,6 +42,9 @@ final class GraphQLNetwork {
                             quote: quoteValue
                         )
                     }
+                    //save to cache
+                    OfflineCacheManager.shared.saveRates(rates)
+                    
                     completion(.success(rates))
                 } else if let errors = graphQLResult.errors {
                     let message = errors.map { $0.localizedDescription }.joined(separator: ", ")
@@ -51,7 +54,16 @@ final class GraphQLNetwork {
                     completion(.failure(error))
                 }
             case .failure(let error):
-                completion(.failure(error))
+                print("Network error: \(error.localizedDescription)")//try offline
+                let cachedResult = OfflineCacheManager.shared.loadRates()
+                
+                if !cachedResult.isEmpty {
+                    //return cached data
+                    completion(.success(cachedResult))
+                } else {
+                    //or error
+                    completion(.failure(error))
+                }
             }
         }
     }

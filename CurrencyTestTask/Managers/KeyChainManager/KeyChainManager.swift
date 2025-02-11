@@ -1,6 +1,7 @@
 import Foundation
 import Security
 
+//manager for store API keys securely
 final class KeychainManager {
     
     static let shared = KeychainManager()

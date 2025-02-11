@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct CurrencyRateModel: Hashable {
+struct CurrencyRateModel: Hashable, Codable {
     let date: String
     let baseCurrency: String
     let quoteCurrency: String
